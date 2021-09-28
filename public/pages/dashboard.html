@@ -1,0 +1,171 @@
+<!-- Info boxes -->
+<div class="row">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-gray"><i class="fa fa-users"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">UTENTI</span>
+                <span class="info-box-number"><span id="totals-users">0</span> <span class="info-box-note">Totale</span></span>
+                <span class="info-box-number"><span id="totals-users-last-month">0</span> <span class="info-box-note">Ultimi <span class='dash-days'>30</span> giorni</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-handshake-o"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">PRI PUBBLICATI</span>
+                <span class="info-box-number"><span id="totals-projects-live">0</span> <span class="info-box-note">Totale</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-handshake-o"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">CHIUSI CON SUCCESSO</span>
+                <span class="info-box-number"><span id="totals-projects-funded">0</span> <span class="info-box-note">Totale</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-handshake-o"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">CHIUSI SENZA SUCCESSO</span>
+                <span class="info-box-number"><span id="totals-projects-notfunded">0</span> <span class="info-box-note">Totale</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-gray"><i class="fa fa-money"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">TRANSAZIONI</span>
+                <span class="info-box-number"><span id="totals-transactions">0</span> &euro; <span class="info-box-note">Totale</span></span>
+                <span class="info-box-number"><span id="totals-transactions-last-month">0</span> &euro; <span class="info-box-note">Ultimi <span class='dash-days'>30</span> giorni</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-money"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">PRELEVATE</span>
+                <span class="info-box-number"><span id="totals-transactions-confirmed">0</span> &euro; <span class="info-box-note">Totale</span></span>
+                <span class="info-box-number"><span id="totals-transactions-confirmed-last-month">0</span> &euro; <span class="info-box-note">Ultimi <span class='dash-days'>30</span> giorni</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-money"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">IN ATTESA</span>
+                <span class="info-box-number"><span id="totals-transactions-pending">0</span> &euro; <span class="info-box-note">Totale</span></span>
+                <span class="info-box-number"><span id="totals-transactions-pending-last-month">0</span> &euro; <span class="info-box-note">Ultimi <span class='dash-days'>30</span> giorni</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-money"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">NON PRELEVATE</span>
+                <span class="info-box-number"><span id="totals-transactions-failed">0</span> &euro; <span class="info-box-note">Totale</span></span>
+                <span class="info-box-number"><span id="totals-transactions-failed-last-month">0</span> &euro; <span class="info-box-note">Ultimi <span class='dash-days'>30</span> giorni</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Andamento Prodotti</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="chart">
+                    <canvas id="chartColumnTransactionsTotal" style="height: 450px !important;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="">
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Rapporto Prelievo</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <p class="text-center">
+                            <strong>Totale Transazioni</strong>
+                        </p>
+                        <div class="chart" style="max-width: 250px; margin: auto">
+                            <canvas id="chartPieTransactionsTotal"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <p class="text-center">
+                            <strong>Ultimi <span class='dash-days'>30</span> giorni</strong>
+                        </p>
+                        <div class="chart" style="max-width: 250px; margin: auto">
+                            <canvas id="chartPieTransactionsLastDays"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-xs-12">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <h3 class="box-title">Prodotti Pubblicati</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-12" id="recap-project-live">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Prodotti Chiusi</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-12" id="recap-project-archive">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

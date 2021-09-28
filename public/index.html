@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="shortcut icon" href="dist/img/Logo.png">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="dist/img/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="dist/img/favicon-16x16.png">
+
+
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/4.5.7/standard/skins/moono/editor.css?t=G14E">
+    <link rel="stylesheet" href="libs/morris/morris.css">
+    <link rel="stylesheet" href="libs/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="libs/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="libs/bootstrap-treeview/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="libs/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="libs/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="libs/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="libs/timepicker/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="libs/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="libs/select2/select2.min.css">
+    <link rel="stylesheet" href="libs/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="libs/fullcalendar/fullcalendar.print.css" media="print">
+    <link rel="stylesheet" href="libs/adminLTE/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="libs/adminLTE/css/skins/_all-skins.min.css">
+
+    <!-- Browser imagecompression CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@latest/dist/browser-image-compression.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+
+    <!-- jQuery 2.2.3 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap 3.3.7 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+
+    <!-- Plugin JS -->
+    <script id="fr-fek">
+        try {
+            (function(k) {
+                localStorage.FEK = k;
+                t = document.getElementById('fr-fek');
+                t.parentNode.removeChild(t);
+            })('bTYPASIBGMWC1YLMP==')
+        } catch (e) {}
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/hmac.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/hmac-sha512.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
+    <script type="text/javascript" src="https://cdn.ckeditor.com/4.5.7/standard/config.js?t=G14E"></script>
+    <script type="text/javascript" src="https://cdn.ckeditor.com/4.5.7/standard/lang/it.js?t=G14E"></script>
+    <script type="text/javascript" src="https://cdn.ckeditor.com/4.5.7/standard/styles.js?t=G14E"></script>
+
+    <script type="text/javascript" src="libs/adminLTE/js/app.min.js"></script>
+    <script type="text/javascript" src="libs/morris/morris.min.js"></script>
+    <script type="text/javascript" src="libs/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="libs/datatables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="libs/datatables/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script type="text/javascript" src="libs/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script type="text/javascript" src="libs/knob/jquery.knob.js"></script>
+    <script type="text/javascript" src="libs/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script type="text/javascript" src="libs/select2/select2.full.min.js"></script>
+    <script type="text/javascript" src="libs/input-mask/jquery.inputmask.js"></script>
+    <script type="text/javascript" src="libs/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script type="text/javascript" src="libs/input-mask/jquery.inputmask.extensions.js"></script>
+    <script type="text/javascript" src="libs/fullcalendar/fullcalendar.js"></script>
+    <script type="text/javascript" src="libs/fullcalendar/locale/it.js"></script>
+    <script type="text/javascript" src="libs/daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="libs/datepicker/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="libs/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script type="text/javascript" src="libs/timepicker/bootstrap-timepicker.min.js"></script>
+    <script type="text/javascript" src="libs/slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="libs/fastclick/fastclick.js"></script>
+    <script type="text/javascript" src="libs/chartjs/Chart.min.js"></script>
+
+    <!-- Froala Editor -->
+    <script type="text/javascript" src="libs/froala-editor/js/froala_editor.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/align.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/char_counter.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/code_beautifier.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/code_view.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/colors.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/draggable.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/emoticons.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/entities.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/file.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/font_size.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/font_family.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/fullscreen.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/image.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/image_manager.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/line_breaker.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/inline_style.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/link.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/lists.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/paragraph_format.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/paragraph_style.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/quick_insert.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/quote.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/table.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/save.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/url.min.js"></script>
+    <script type="text/javascript" src="libs/froala-editor/js/plugins/video.min.js"></script>
+    <link rel="stylesheet" href="libs/froala-editor/css/froala_editor.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/froala_style.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/code_view.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/colors.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/emoticons.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/image_manager.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/image.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/line_breaker.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/table.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/char_counter.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/video.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/fullscreen.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/file.css">
+    <link rel="stylesheet" href="libs/froala-editor/css/plugins/quick_insert.css">
+
+    
+	<!--CSS Admin-->
+	<link rel="stylesheet" href="dist/css/admin.202109271952.min.css" />
+
+	<!--JS Library Admin-->
+	<script type="text/javascript" src="dist/js/admin.202109271952.min.js"></script>
+
+</head>
+
+<body class="hold-transition fixed skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <header class="main-header">
+            <a href="#" onclick="_section.dashboard()" class="logo">
+                <span class="logo-mini"><b></b></span>
+                <span class="logo-lg"></span>
+            </a>
+            <nav class="navbar navbar-static-top">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="user user-menu">
+                            <div class="pull-right">
+                                <a href="#" class="btn btn-danger" onclick="_auth.logout()"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                            </div>
+                            <span class="hidden-xs user-admin"></span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <ul class="sidebar-menu">
+                    <div id="nav-menu"></div>
+                </ul>
+            </section>
+            <div class="main-footer">
+                <div class="logo-footer"></div>
+            </div>
+        </aside>
+
+        <div class="content-wrapper">
+            <section class="content-header">
+                <div class="row">
+                    <div class="title col-sm-6">
+                        <h3><small></small></h3>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="actions nopadding text-right"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content" id="main-content"></section>
+        </div>
+    </div>
+
+    <div class="modal fade" id="formModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Edit</h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <div class="alert alert-danger text-center hide"></div>
+                    <button type="button" class="btn btn-danger" style="float:left" onclick="_form.delete()">Cancella investimento</button>
+                    <button type="button" class="btn btn-warning btn-remimber" style="float:left" onclick="_form.remimberTransaction()">Sollecita versamento</button>
+                    <button type="button" class="btn btn-info" onclick="_form.duplicate()">Duplica</button>
+                    <button type="button" class="btn btn-success" onclick="_form.save()">Salva</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="login-box">
+        <div class="login-logo"></div>
+        <div class="login-box-body">
+            <div class="form-group has-feedback">
+                <input type="email" id="login-email" value="" example="admin_ondequadre" class="form-control" placeholder="E-mail">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" id="login-password" value="" example="123456" class="form-control" placeholder="Password">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="alert alert-danger alert-nolog hide"></div>
+                    <button type="submit" class="btn btn-block btn-flat" onclick="_auth.login()">Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="logo-nicolasolazzo"></div>
+    </div>
+
+</body>
+
+</html>
